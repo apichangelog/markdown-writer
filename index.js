@@ -54,5 +54,10 @@ MarkdownBuilder.prototype._transform = function (chunk, enc, callback) {
   if ((text = format(chunk))) {
     this.push(text)
   }
+
+  if (chunk.type === 'document.end') {
+    this.push(null)
+  }
+
   callback()
 }
