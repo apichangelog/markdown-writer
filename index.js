@@ -20,7 +20,7 @@ function format (chunk) {
         text: chunk.text
       })
     case 'anchor':
-      return dullstring('<a href=":name"></a>\n')(chunk)
+      return dullstring('<a name=":name"></a>\n')(chunk)
     case 'link':
       return dullstring('[:target](:text)')(chunk)
     case 'text':
